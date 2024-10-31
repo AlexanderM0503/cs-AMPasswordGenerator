@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             mainFormMenu = new MenuStrip();
             mainFormMenuFile = new ToolStripMenuItem();
             mainFormMenuDefault = new ToolStripMenuItem();
@@ -87,6 +88,7 @@
             mainFormMenuExit.Name = "mainFormMenuExit";
             mainFormMenuExit.Size = new Size(224, 22);
             mainFormMenuExit.Text = "Выход";
+            mainFormMenuExit.Click += mainFormMenuExit_Click;
             // 
             // mainFormMenuHelp
             // 
@@ -123,6 +125,7 @@
             buttonSet12.TabIndex = 3;
             buttonSet12.Text = "12";
             buttonSet12.UseVisualStyleBackColor = true;
+            buttonSet12.Click += buttonSet12_Click;
             // 
             // buttonSet8
             // 
@@ -132,6 +135,7 @@
             buttonSet8.TabIndex = 2;
             buttonSet8.Text = "8";
             buttonSet8.UseVisualStyleBackColor = true;
+            buttonSet8.Click += buttonSet8_Click;
             // 
             // buttonSet4
             // 
@@ -141,6 +145,7 @@
             buttonSet4.TabIndex = 1;
             buttonSet4.Text = "4";
             buttonSet4.UseVisualStyleBackColor = true;
+            buttonSet4.Click += buttonSet4_Click;
             // 
             // numChars
             // 
@@ -236,6 +241,7 @@
             buttonGenPassword.TabIndex = 1;
             buttonGenPassword.Text = "Сгенерировать";
             buttonGenPassword.UseVisualStyleBackColor = true;
+            buttonGenPassword.Click += buttonGenPassword_Click;
             // 
             // passwordString
             // 
@@ -256,9 +262,12 @@
             Controls.Add(groupCharTypes);
             Controls.Add(groupNumChars);
             Controls.Add(mainFormMenu);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = mainFormMenu;
             Name = "MainForm";
             Text = "AMPasswordGenerator";
+            FormClosed += MainForm_FormClosed;
+            Load += MainForm_Load;
             mainFormMenu.ResumeLayout(false);
             mainFormMenu.PerformLayout();
             groupNumChars.ResumeLayout(false);
