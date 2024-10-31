@@ -1,4 +1,4 @@
-namespace AMPasswordGenerator
+п»їnamespace AMPasswordGenerator
 {
     public partial class MainForm : Form
     {
@@ -63,7 +63,7 @@ namespace AMPasswordGenerator
             }
             else
             {
-                passwordString.Text = "Не выбраны типы символов";
+                passwordString.Text = "РќРµ РІС‹Р±СЂР°РЅС‹ С‚РёРїС‹ СЃРёРјРІРѕР»РѕРІ";
             }
         }
     }
