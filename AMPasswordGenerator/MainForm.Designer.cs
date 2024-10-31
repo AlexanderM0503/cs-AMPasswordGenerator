@@ -77,6 +77,7 @@
             mainFormMenuDefault.Name = "mainFormMenuDefault";
             mainFormMenuDefault.Size = new Size(224, 22);
             mainFormMenuDefault.Text = "Параметры по умолчанию";
+            mainFormMenuDefault.Click += mainFormMenuDefault_Click;
             // 
             // mainFormMenuSeparator1
             // 
